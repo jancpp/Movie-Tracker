@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct MovieView: View {
+struct MovieDetail: View {
     
     @State var title = ""
     @State var rating = 3.0
@@ -55,7 +55,7 @@ struct MovieView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieView()
+        MovieDetail()
     }
 }
 
