@@ -26,12 +26,12 @@ struct MovieDetail: View {
                 SectionTitle(title: "Rating")
                 HStack {
                     Spacer()
-                    Text(String(repeating: "★", count: Int(movie.rating))).foregroundColor(.yellow).font(.title).accessibility(label: <#T##Text#>)
+                    Text(String(repeating: "★", count: Int(movie.rating))).foregroundColor(.yellow).font(.title).accessibility(label: Text("\(Int(movie.rating)) star rating"))
                     Spacer()
                 }
             }
             Section {
-                Slider(value: $movie.rating, in: 1...5, step: 1)
+                Slider(value: $movie.rating, in: 1...5, step: 1).accessibility(value: Text("\(Int(movie.rating))"))
             }
             Section {
                 SectionTitle(title: "Seen")
